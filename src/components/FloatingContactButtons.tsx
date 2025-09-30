@@ -6,7 +6,7 @@ const FloatingContactButtons = () => {
 
   const handleWhatsAppClick = () => {
     // Replace with actual WhatsApp number (include country code without + sign)
-    const phoneNumber = '919876543210'; // Example: Indian number
+    const phoneNumber = '919540900043'; // Example: Indian number
     const message = encodeURIComponent('Hello! I am interested in your packaging products. Please provide more information.');
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
     window.open(whatsappUrl, '_blank');
@@ -14,7 +14,7 @@ const FloatingContactButtons = () => {
 
   const handleCallClick = () => {
     // Replace with actual phone number
-    const phoneNumber = '+91-98765-43210';
+    const phoneNumber = '+91-9540900043';
     window.location.href = `tel:${phoneNumber}`;
   };
 

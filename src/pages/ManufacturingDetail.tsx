@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, Check, Package, Truck, Shield, MessageSquare } from 'lucide-react';
 import EnquiryModal from '../components/EnquiryModal';
-import bopp_tap from "../assets/bop_tap.png"
+import bopp_tape from "../assets/bopp_tape.jpg"
 import bubble_bag from "../assets/bubble_bags.png"
 import bubble_pouch from "../assets/air_bubble_pouch.png"
 import bubble_roll from "../assets/bubble_roll.png"
@@ -11,6 +11,13 @@ import ld_bags from "../assets/ld_bags.png"
 import ep_foam from "../assets/ep_foam_sheet.png"
 import ep_fitment from "../assets/ep_fitment.png"
 import multi_bop_tap from "../assets/multi_printed_tap.png"
+import self_seal_pouch from "../assets/self_seal_polybag.jpg"
+import anti_static_polybag from "../assets/anti_static_pouch.webp"
+import printed_pouch_polybag from "../assets/printed_poly_bag.jpg"
+import vci_poly_bags from "../assets/vci_poly_bag.webp"
+import epe_foam_bag from "../assets/epe_foam_bag.jpg"
+import epe_foam_hmhd_pouch from "../assets/epe_foam_hmhd_pouch.webp"
+
 
 
 const ManufacturingDetail = () => {
@@ -57,21 +64,134 @@ const ManufacturingDetail = () => {
             ],
             specifications: {
                 'Material': 'Polyethylene (PE)',
-                'Bubble Size': '10mm diameter',
+                'Bubble Size': 'According to customer',
                 'Thickness': '80-120 microns',
-                'Sizes Available': '100mm to 600mm width',
+                'Sizes Available': 'According to cutomer',
                 'Closure Type': 'Self-sealing adhesive',
-                'Temperature Range': '-40°C to +80°C'
             },
             details: [
                 'Perfect for protecting electronics, glassware, and delicate items',
                 'Provides superior cushioning compared to traditional packaging',
                 'Easy to use with no additional sealing equipment required',
                 'Reduces packaging time and labor costs',
-                'Available in custom sizes and specifications',
-                'Environmentally friendly and recyclable materials'
+                
             ]
         },
+        'self-seal-pouch': {
+            name: 'Self Seal Pouch',
+            category: 'Polybags / Pouches',
+            image: self_seal_pouch,
+            description: 'Convenient resealable pouches designed for secure storage and packaging. Ideal for keeping products fresh, protected, and easy to access.',
+            features: [
+                'Easy-to-use resealable closure',
+                'Strong and durable material',
+                'Moisture and dust resistant',
+                'Reusable and economical',
+                'Available in multiple sizes and thicknesses'
+            ],
+            specifications: {
+                'Material': 'Low Density Polyethylene (LDPE) / Polypropylene (PP)',
+                'Size Range': 'According to customer"',
+                'Closure Type': 'Self-seal / Zip lock',
+                'Printing': 'Up to 2 colors available',
+                'Finish Options': 'Glossy or matte'
+            },
+            details: [
+                'Perfect for packaging food, electronics, and retail products',
+                'Provides airtight sealing to maintain product freshness',
+                'Easy open and close functionality for end users',
+                'Custom sizes and printing available',
+                'Meets food safety standards'
+            ]
+        },
+        'anti-static-polybag': {
+            name: 'Anti Static Pouch',
+            category: 'Polybags / Protective Bags',
+            image: anti_static_polybag,
+            description: 'Specially designed polybags that protect sensitive electronic components from static electricity damage during storage and shipping.',
+            features: [
+                'Prevents static charge build-up',
+                'Strong and durable material',
+                'Transparent for easy product identification',
+                'Lightweight yet protective',
+                'Moisture and dust resistant',
+                'Reusable and recyclable'
+            ],
+            specifications: {
+                'Material': 'Polyethylene with anti-static additive',
+                'Color': 'According to customer',
+                'Thickness Range': '40-100 microns',
+                'Size Range': 'According to customer"',
+                'Closure Options': 'Open top, zip lock, self-seal',
+                'Surface Resistance': '10^9 to 10^11 ohms/sq'
+            },
+            details: [
+                'Ideal for packaging electronic components and PCBs',
+                'Prevents electrostatic discharge (ESD) damage',
+                'Custom printing available for branding and instructions',
+                'Meets international ESD protection standards',
+                'Suitable for export packaging of electronics',
+                'Lightweight and economical solution'
+            ]
+        },
+        'printed-pouch-polybag': {
+            name: 'Printed pouch',
+            category: 'Polybags / Pouches',
+            image: printed_pouch_polybag,
+            description: 'Custom printed poly pouches designed for attractive retail packaging and secure product storage.',
+            features: [
+                'High-quality custom printing',
+                'Strong and durable construction',
+                'Excellent product visibility',
+                'Moisture and dust resistant',
+                'Available in multiple sizes and thicknesses',
+                'Supports branding and product information'
+            ],
+            specifications: {
+                'Printing': 'Up to 4 colors (rotogravure/flexographic)',
+                'Thickness Range': 'According to customer',
+                'Size Range': 'According to customer"',
+                'Finish Options': 'Glossy, matte, transparent, opaque'
+            },
+            details: [
+                'Ideal for FMCG, food, retail, and export packaging',
+                'Enhances shelf appeal with attractive printing',
+                'Customizable with logos, designs, and product details',
+                'Provides secure sealing and product protection',
+                'Available with gussets for larger volume products',
+            ]
+        },
+        'anti-static-poly-bags': {
+    name: 'Anti Static Poly Bags',
+    category: 'Protective Packaging / Poly Bags',
+    image: anti_static_polybag, // make sure you import the image
+    description: 'Anti Static Poly Bags are designed to protect sensitive electronic components from electrostatic discharge (ESD) damage. These bags provide a reliable and cost-effective packaging solution for semiconductors, printed circuit boards (PCBs), and other delicate electronic devices, ensuring safety during handling, shipping, and storage.',
+    features: [
+        'Prevents electrostatic discharge (ESD)',
+        'Protects sensitive electronic components',
+        'Durable and puncture-resistant material',
+        'Lightweight and cost-effective',
+        'Transparent or tinted for easy identification',
+        'Available with open top or zip lock closure'
+    ],
+    specifications: {
+        'Material': 'Polyethylene with anti-static additive',
+        'Surface Resistance': '10^9 – 10^11 ohms/sq',
+        'Color': 'Pink / Clear',
+        'Closure': 'Open top / Zip lock',
+        'Size Range': 'Custom sizes available',
+        'Thickness Range': 'Varies as per requirement'
+    },
+    details: [
+        'Ideal for packaging semiconductors, PCBs, and sensitive electronic devices',
+        'Minimizes risk of static charge build-up during transport and handling',
+        'Complies with ESD-safe packaging requirements',
+        'Can be customized with print and branding',
+        'Cost-effective solution for electronics industry packaging',
+        'Widely used in manufacturing, assembly, and shipping applications'
+    ]
+},
+     
         'laminated-air-bubble-pouch': {
             name: 'Laminated Air Bubble Pouch',
             category: 'Air Bubble Roll Packaging',
@@ -87,7 +207,7 @@ const ManufacturingDetail = () => {
             ],
             specifications: {
                 'Material': 'Laminated PE/AL/PE',
-                'Bubble Size': '12mm diameter',
+                'Bubble Size': 'According to customer',
                 'Thickness': '100-150 microns',
                 'Barrier Properties': 'Oxygen, moisture, light protection',
                 'Static Protection': 'Anti-static coating available',
@@ -117,9 +237,9 @@ const ManufacturingDetail = () => {
             ],
             specifications: {
                 'Material': 'Virgin Polyethylene',
-                'Bubble Sizes': '8mm, 10mm, 12mm diameter',
-                'Roll Width': '300mm to 1500mm',
-                'Roll Length': '50m to 300m',
+                'Bubble Sizes': 'According to customer',
+                'Roll Width': 'According to customer',
+                'Roll Length': 'According to customer',
                 'Perforation': 'Available every 300mm',
                 'Core Size': '76mm (3 inch) standard'
             },
@@ -147,8 +267,8 @@ const ManufacturingDetail = () => {
             ],
             specifications: {
                 'Material': 'Low Density Polyethylene (LDPE)',
-                'Thickness Range': '25-200 microns',
-                'Width Options': '100mm to 6000mm',
+                'Thickness Range': 'According to customer',
+                'Width Options': 'According to customer',
                 'Color Options': 'Natural, Black, Blue, Red, Custom',
                 'Additives': 'UV stabilizers, Anti-static, Anti-block',
                 'Compliance': 'FDA approved grades available'
@@ -162,6 +282,36 @@ const ManufacturingDetail = () => {
                 'Environmentally friendly and recyclable'
             ]
         },
+        'vci-poly-bags': {
+    name: 'VCI Poly Bags',
+    category: 'Protective Packaging / Poly Bags',
+    image: vci_poly_bags, // make sure you import the image
+    description: 'SOur Kraft Paper Bubble Lined Bags, Paper Cushion Padded Envelopes, and Bubble Courier Bags are specially designed to provide superior protection and convenience for shipping and packaging applications. Combining durability, cushioning, and eco-friendly materials, these packaging solutions are ideal for businesses and individuals looking to ship products safely..',
+    features: [
+        'Prevents rust and corrosion on metals',
+        'Durable and tear-resistant',
+        'Moisture and dust barrier protection',
+        'Available in multiple sizes and thicknesses',
+        'Transparent for easy identification',
+        'Environmentally friendly options available'
+    ],
+    specifications: {
+        'Material': 'Polyethylene with VCI additive',
+        'Thickness Range': 'According to customer',
+        'Size Range': 'According to customer',
+        'Color': 'Transparent / Semi-transparent',
+        'Shelf Life': 'Up to 2 years in proper storage',
+        'Temperature Range': '-20°C to 60°C'
+    },
+    details: [
+        'Ideal for storing and transporting metal parts and components',
+        'Prevents rust during shipping and storage',
+        'Easy to use and seal',
+        'Custom sizes available on request',
+        'Compatible with industrial packaging and pallets',
+        'Cost-effective corrosion protection solution'
+    ]
+},
         'ld-bags': {
             name: 'LD Bags',
             category: 'Polybags / Rolls',
@@ -177,8 +327,8 @@ const ManufacturingDetail = () => {
             ],
             specifications: {
                 'Material': 'Low Density Polyethylene (LDPE)',
-                'Thickness Range': '25-150 microns',
-                'Size Range': '4"x6" to 24"x36"',
+                'Thickness Range': 'According to customer',
+                'Size Range': 'According to customer',
                 'Closure Types': 'Heat seal, zip lock, drawstring',
                 'Gusset Options': 'Side gusset, bottom gusset',
                 'Printing': 'Up to 8 colors available'
@@ -207,10 +357,10 @@ const ManufacturingDetail = () => {
             ],
             specifications: {
                 'Material': 'Expanded Polystyrene (EPS)',
-                'Density Range': '15-30 kg/m³',
-                'Thickness Options': '5mm to 100mm',
-                'Width Range': '600mm to 2000mm',
-                'Compressive Strength': '100-300 kPa',
+                'Density Range': 'According to customer',
+                'Thickness Options': 'According to customer',
+                'Width Range': 'According to customer',
+                'Compressive Strength': 'According to customer',
                 'Thermal Conductivity': '0.032-0.038 W/mK'
             },
             details: [
@@ -237,7 +387,7 @@ const ManufacturingDetail = () => {
             ],
             specifications: {
                 'Material': 'Expanded Polystyrene (EPS)',
-                'Density Range': '20-35 kg/m³',
+                'Density Range': 'According to customer',
                 'Molding Capability': 'Custom shapes and sizes',
                 'Dimensional Tolerance': '±0.5mm',
                 'Surface Finish': 'Smooth, textured options',
@@ -252,10 +402,70 @@ const ManufacturingDetail = () => {
                 'Cost-effective for medium to high volume production'
             ]
         },
+        'epe-foam-bag': {
+    name: 'EPE Foam Bag',
+    category: 'EPE Foam / Pouch / Bag',
+    image: epe_foam_bag, // make sure you import the image
+    description: 'EPE Foam Bags are lightweight, flexible, and non-abrasive packaging solutions designed to protect delicate products from scratches, dust, and minor impacts. Ideal for electronics, glassware, and precision components, these bags provide reliable cushioning during storage and transit.',
+    features: [
+        'Excellent cushioning and shock absorption',
+        'Scratch-resistant and non-abrasive surface',
+        'Lightweight yet durable construction',
+        'Moisture and dust resistant',
+        'Available in multiple sizes and thicknesses',
+        'Reusable and eco-friendly options available'
+    ],
+    specifications: {
+        'Material': 'Expanded Polyethylene (EPE) Foam',
+        'Thickness Range': '0.5mm – 5mm (customizable)',
+        'Density': '18–35 kg/m³',
+        'Sizes': 'Custom sizes available',
+        'Color': 'White / Pink / Custom',
+        'Closure Options': 'Open top / Self-seal'
+    },
+    details: [
+        'Widely used for electronics, glassware, ceramics, and precision instruments',
+        'Protects against scratches, abrasions, and light impacts',
+        'Lightweight design reduces overall shipping costs',
+        'Custom printing and branding available',
+        'Reusable and recyclable for sustainable packaging',
+        'Cost-effective solution for protective packaging needs'
+    ]
+},
+'epe-foam-hmhd-pouch': {
+    name: 'EPE Foam HMHD Pouch',
+    category: 'EPE Foam / Pouch / Bag',
+    image: epe_foam_hmhd_pouch, // make sure you import the image
+    description: 'EPE Foam HMHD Pouches combine the cushioning benefits of EPE foam with the durability of HMHD film. These pouches are designed to provide dual-layer protection against impacts, scratches, moisture, and dust, making them ideal for packaging delicate and fragile items during storage and transportation.',
+    features: [
+        'Dual-layer construction with EPE foam and HMHD film',
+        'Superior cushioning and shock absorption',
+        'Scratch-resistant and non-abrasive surface',
+        'Tear and puncture-resistant outer layer',
+        'Moisture and dust protection',
+        'Lightweight yet heavy-duty performance',
+        'Custom sizes, thicknesses, and closures available'
+    ],
+    specifications: {
+        'Material': 'Expanded Polyethylene (EPE) Foam laminated with HMHD Polyethylene Film',
+        'Sizes': 'Custom sizes available',
+        'Color': 'White / Pink / Transparent / Custom',
+        'Closure Options': 'Open top / Self-seal / Heat seal',
+        'Applications': 'Electronics, glassware, ceramics, precision instruments, industrial components'
+    },
+    details: [
+        'Ideal for fragile and high-value product packaging',
+        'Reduces transit damage with added cushioning',
+        'Provides barrier protection against dust and moisture',
+        'Customizable thickness, size, and closure options',
+        'Reusable and recyclable material options available',
+        'Cost-effective solution for protective industrial packaging'
+    ]
+},
         'bopp-tape': {
             name: 'BOPP Tape',
             category: 'BOPP Tape',
-            image: bopp_tap,
+            image: bopp_tape,
             description: 'Standard BOPP tape with strong adhesion for general packaging needs. Our BOPP tapes offer excellent performance and reliability for sealing applications.',
             features: [
                 'Strong adhesion to various surfaces',
@@ -268,10 +478,8 @@ const ManufacturingDetail = () => {
             specifications: {
                 'Material': 'BOPP Film + Acrylic Adhesive',
                 'Width Options': '12mm to 72mm',
-                'Length Options': '40m to 1000m',
-                'Total Thickness': '40-65 microns',
-                'Adhesion Strength': '8-12 N/25mm',
-                'Tensile Strength': '150-200 N/25mm'
+                'Length Options': 'According to customer',
+               
             },
             details: [
                 'Perfect for carton sealing and packaging applications',
@@ -288,8 +496,6 @@ const ManufacturingDetail = () => {
             image: multi_bop_tap,
             description: 'Customizable printed BOPP tapes for branding and promotional needs. Our printed tapes combine functionality with marketing appeal.',
             features: [
-                'Custom printing available up to 6 colors',
-                'High-quality graphics and text',
                 'Enhanced brand visibility during shipping',
                 'Multiple color printing capabilities',
                 'Excellent print adhesion and durability',
@@ -298,10 +504,9 @@ const ManufacturingDetail = () => {
             specifications: {
                 'Material': 'BOPP Film + Acrylic Adhesive',
                 'Printing Colors': 'Up to 6 colors',
-                'Width Options': '25mm to 72mm',
+                'Width Options': 'According to customer',
                 'Print Quality': 'High resolution up to 150 LPI',
                 'Print Durability': 'Fade resistant inks',
-                'Minimum Order': '1000 rolls per design'
             },
             details: [
                 'Perfect for brand promotion and marketing',
@@ -375,24 +580,6 @@ const ManufacturingDetail = () => {
                                 <p className="text-sm lg:text-lg text-gray-700">{currentProduct.description}</p>
                             </div>
 
-                            {/* Quality Badges - Responsive Layout */}
-                            <div className="grid grid-cols-3 gap-2 lg:gap-4 mb-6 lg:mb-8">
-                                <div className="text-center p-2 lg:p-4 bg-blue-50 rounded-lg">
-                                    <Package className="h-6 w-6 lg:h-8 lg:w-8 text-blue-700 mx-auto mb-1 lg:mb-2" />
-                                    <h3 className="text-xs lg:text-sm font-semibold text-gray-900">Quality Assured</h3>
-                                    <p className="text-xs text-gray-600 hidden lg:block">ISO certified</p>
-                                </div>
-                                <div className="text-center p-2 lg:p-4 bg-blue-50 rounded-lg">
-                                    <Truck className="h-6 w-6 lg:h-8 lg:w-8 text-blue-700 mx-auto mb-1 lg:mb-2" />
-                                    <h3 className="text-xs lg:text-sm font-semibold text-gray-900">Fast Delivery</h3>
-                                    <p className="text-xs text-gray-600 hidden lg:block">Quick shipping</p>
-                                </div>
-                                <div className="text-center p-2 lg:p-4 bg-blue-50 rounded-lg">
-                                    <Shield className="h-6 w-6 lg:h-8 lg:w-8 text-blue-700 mx-auto mb-1 lg:mb-2" />
-                                    <h3 className="text-xs lg:text-sm font-semibold text-gray-900">Reliable</h3>
-                                    <p className="text-xs text-gray-600 hidden lg:block">15+ years experience</p>
-                                </div>
-                            </div>
 
                             {/* Action Buttons - Responsive Layout */}
                             <div className="flex flex-col sm:flex-row gap-3">

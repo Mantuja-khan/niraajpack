@@ -460,8 +460,15 @@ import ld_sheet from "../assets/ld_sheet.png"
 import ld_bags from "../assets/ld_bags.png"
 import ep_foam from "../assets/ep_foam_sheet.png"
 import ep_fitment from "../assets/ep_fitment.png"
-import bopp_tap from "../assets/bop_tap.png"
+import bopp_tap from "../assets/bopp_tape.jpg"
 import multi_bop_tap from "../assets/multi_printed_tap.png"
+import self_seal_pouch from "../assets/self_seal_polybag.jpg"
+import anti_static_polybag from "../assets/anti_static_pouch.webp"
+import printed_pouch_polybag from "../assets/printed_poly_bag.jpg"
+import vci_poly_bags from "../assets/vci_poly_bag.webp"
+import epe_foam_bag from "../assets/epe_foam_bag.jpg"
+import epe_foam_hmhd_pouch from "../assets/epe_foam_hmhd_pouch.webp"
+
 
 const ProductCategory = () => {
   const { category } = useParams();
@@ -489,10 +496,10 @@ const ProductCategory = () => {
       productCategory: ''
     });
   };
-
+  //boost from data storage 
   const categoryData: { [key: string]: any } = {
     'air-bubble-roll-packaging': {
-      name: 'Air Bubble Roll/pouch/Bag',
+      name: 'Air Bubble Roll/Bag',
       description: 'Premium air bubble packaging solutions designed for maximum protection during shipping and storage. Our advanced manufacturing process ensures consistent bubble formation and superior cushioning properties.',
       backgroundImage: 'https://media.istockphoto.com/id/1388184241/photo/modern-abstract-wavy-black-empty-space-round-pedestal-background-black-friday-3d-illustration.jpg?s=612x612&w=0&k=20&c=HZO36DU9EhrG5KxbmayWJzuFBT4CxH8ZEQicwt_NsgQ=',
       products: [
@@ -507,6 +514,7 @@ const ProductCategory = () => {
             'Self-sealing adhesive strip',
             'Lightweight yet durable'
           ],
+
           specifications: {
             'Material': 'Polyethylene',
             'Bubble Size': '10mm diameter',
@@ -533,6 +541,26 @@ const ProductCategory = () => {
           }
         },
         {
+          name: 'Anti Static Polybag',
+          slug: 'anti-static-polybag',
+          image: anti_static_polybag, // replace with your actual image import
+          description: 'Durable polybags designed to safely store and transport electronic components  ',
+          features: [
+            'Prevents electrostatic discharge (ESD)',
+            'Protects sensitive electronic components',
+            'Transparent for easy identification',
+            'Durable and puncture resistant',
+            'Lightweight and cost-effective packaging solution'
+          ],
+          specifications: {
+            'Material': 'Polyethylene with anti-static additive',
+            'Surface Resistance': '10^9 – 10^11 ohms/sq',
+            'Color': 'Pink / Clear',
+            'Closure': 'Open top / Zip lock',
+            'Applications': 'PCBs, semiconductors, electronic devices'
+          }
+        },
+        {
           name: 'Air Bubble Roll',
           slug: 'air-bubble-roll',
           image: bubble_roll,
@@ -549,7 +577,7 @@ const ProductCategory = () => {
             'Roll Width': '300mm to 1500mm',
             'Roll Length': '50m to 300m'
           }
-        }
+        },
       ]
     },
     'polybags-rolls': {
@@ -576,6 +604,44 @@ const ProductCategory = () => {
           }
         },
         {
+          name: 'Printed Pouch',
+          slug: 'printed-pouch-polybag',
+          image: printed_pouch_polybag,
+          description: 'Custom printed poly pouches designed for secure packaging and enhanced brand visibility.',
+          features: [
+            'Supports custom branding and logos',
+            'Durable and moisture resistant',
+            'High-quality printing up to 8 colors',
+            'Available in multiple sizes and finishes'
+          ],
+
+          specifications: {
+            'Material': 'LDPE / Polypropylene (PP)',
+            'Printing': 'Up to 8 colors',
+            'Thickness': '30-150 microns',
+            'Sizes': '3"x4" to 24"x36"'
+          }
+        },
+        {
+          name: 'VCI Poly Bags',
+          slug: 'vci-poly-bags',
+          image: vci_poly_bags, // make sure you import the image
+          description: 'Corrosion inhibiting poly bags for safe storage and transport of metals.',
+          features: [
+            'Prevents rust and corrosion',
+            'Durable and tear-resistant',
+            'Moisture barrier protection',
+            'Available in various sizes'
+          ],
+          specifications: {
+            'Material': 'Polyethylene with VCI additive',
+            'Thickness': '50 to 200 microns',
+            'Size Range': '100mm x 150mm to 600mm x 800mm',
+            'Color': 'Transparent / Semi-transparent',
+            'Shelf Life': 'Up to 2 years in proper storage'
+          }
+        },
+        {
           name: 'LD Bags',
           slug: 'ld-bags',
           image: ld_bags,
@@ -592,7 +658,27 @@ const ProductCategory = () => {
             'Sizes': '4"x6" to 24"x36"',
             'Closure': 'Heat seal, zip lock'
           }
-        }
+        },
+        {
+          name: 'Self Seal Pouch',
+          slug: 'self-seal-pouch',
+          image: self_seal_pouch,
+          description: 'Convenient resealable pouches designed for secure storage and packaging applications.',
+          features: [
+            'Easy-to-use resealable closure',
+            'Strong and durable material',
+            'Moisture and dust resistant',
+            'Excellent transparency for visibility'
+          ],
+
+          specifications: {
+            'Material': 'LDPE / Polypropylene (PP)',
+            'Thickness Range': '30-120 microns',
+            'Size Range': '3"x4" to 18"x24"',
+            'Closure Type': 'Self-seal / Zip lock'
+          }
+        },
+
       ]
     },
     'ep-foam-pouch-fitment': {
@@ -601,7 +687,7 @@ const ProductCategory = () => {
       backgroundImage: 'https://media.istockphoto.com/id/1388184241/photo/modern-abstract-wavy-black-empty-space-round-pedestal-background-black-friday-3d-illustration.jpg?s=612x612&w=0&k=20&c=HZO36DU9EhrG5KxbmayWJzuFBT4CxH8ZEQicwt_NsgQ=',
       products: [
         {
-          name: 'EP Foam Sheet Roll',
+          name: 'EPE Foam Sheet Roll',
           slug: 'ep-foam-sheet-roll',
           image: ep_foam,
           description: 'Expanded polystyrene foam sheets for insulation and cushioning.',
@@ -619,7 +705,7 @@ const ProductCategory = () => {
           }
         },
         {
-          name: 'EP Fitment',
+          name: 'EPE Fitment',
           slug: 'ep-fitment',
           image: ep_fitment,
           description: 'Custom-molded expanded polystyrene fitments for specific products.',
@@ -635,7 +721,52 @@ const ProductCategory = () => {
             'Molding': 'Custom shapes',
             'Tolerance': '±0.5mm'
           }
-        }
+        },
+        {
+          name: 'EPE Foam Bag',
+          slug: 'epe-foam-bag',
+          image: epe_foam_bag, // make sure you import the image
+          description: 'Lightweight and soft EPE foam bags designed to protect delicate products from scratches,  ',
+          features: [
+            'Excellent shock absorption and cushioning',
+            'Scratch-resistant and dust-proof',
+            'Lightweight and flexible material',
+            'Moisture-resistant and non-abrasive',
+            'Available in multiple sizes and thicknesses'
+          ],
+          specifications: {
+            'Material': 'Expanded Polyethylene (EPE) Foam',
+            'Thickness': '0.5mm – 5mm (customizable)',
+            'Density': '18–35 kg/m³',
+            'Sizes': 'Custom sizes available',
+            'Color': 'White / Pink / Custom'
+          }
+        },
+        {
+  name: 'EPE Foam HMHD Pouch',
+  slug: 'epe-foam-hmhd-pouch',
+  image: epe_foam_hmhd_pouch, // make sure you import the image
+  description: 'EPE Foam HMHD Pouches combine the cushioning of EPE foam with the strength of HMHD film....',
+  features: [
+    'Dual-layer protection with EPE foam and HMHD film',
+    'Superior cushioning and shock absorption',
+    'Tear-resistant and durable outer layer',
+    'Moisture and dust protection',
+    'Lightweight yet heavy-duty construction',
+    'Custom sizes, thicknesses, and closures available'
+  ],
+  specifications: {
+    'Material': 'Expanded Polyethylene (EPE) Foam + HMHD Polyethylene Film',
+    'Thickness Range': '0.5mm – 5mm foam with film lamination',
+    'Density': '18 – 35 kg/m³ (EPE foam)',
+    'Sizes': 'Custom sizes available',
+    'Color': 'White / Pink / Transparent / Custom',
+    'Closure Options': 'Open top / Self-seal / Heat seal',
+    'Applications': 'Electronics, glassware, precision instruments, industrial packaging'
+  }
+}
+
+
       ]
     },
     'bopp-tape': {
@@ -699,7 +830,7 @@ const ProductCategory = () => {
   return (
     <div>
       {/* Hero Section with Background Image */}
-      <section 
+      <section
         className="relative bg-gradient-to-r from-blue-900/90 to-blue-700/90 text-white py-12 lg:py-20"
         style={{
           backgroundImage: `url(${currentCategory.backgroundImage})`,
@@ -733,13 +864,16 @@ const ProductCategory = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8">
             {currentCategory.products.map((product: any, index: number) => (
               <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                <div className="aspect-w-16 aspect-h-9">
+                <div className="w-64 h-48 overflow-hidden rounded-lg mx-auto">
                   <img
                     src={product.image}
                     alt={product.name}
-                    className="w-full h-40 lg:h-48 object-cover"
+                    className="w-full h-full object-contain p-2"
                   />
                 </div>
+
+
+
                 <div className="p-4 lg:p-5">
                   <h3 className="text-lg lg:text-xl font-bold text-gray-900 mb-2">
                     {product.name}
@@ -747,9 +881,9 @@ const ProductCategory = () => {
                   <p className="text-sm lg:text-base text-gray-600 mb-4">
                     {product.description}
                   </p>
-                  
+
                   {/* Features - UPDATED: Show only 2 features */}
-                  <div className="mb-4">
+                  {/* <div className="mb-4">
                     <h4 className="text-sm lg:text-base font-semibold text-gray-900 mb-2">
                       Key Features:
                     </h4>
@@ -761,23 +895,7 @@ const ProductCategory = () => {
                         </li>
                       ))}
                     </ul>
-                  </div>
-
-                  {/* Quality Badges - UPDATED: Smaller badges */}
-                  <div className="grid grid-cols-3 gap-2 mb-4">
-                    <div className="text-center p-2 bg-blue-50 rounded-lg">
-                      <Package className="h-4 w-4 text-blue-700 mx-auto mb-1" />
-                      <p className="text-xs font-medium text-gray-900">Quality</p>
-                    </div>
-                    <div className="text-center p-2 bg-blue-50 rounded-lg">
-                      <Truck className="h-4 w-4 text-blue-700 mx-auto mb-1" />
-                      <p className="text-xs font-medium text-gray-900">Fast Ship</p>
-                    </div>
-                    <div className="text-center p-2 bg-blue-50 rounded-lg">
-                      <Shield className="h-4 w-4 text-blue-700 mx-auto mb-1" />
-                      <p className="text-xs font-medium text-gray-900">Reliable</p>
-                    </div>
-                  </div>
+                  </div> */}
 
                   {/* Action Buttons - UPDATED: Added View Details button */}
                   <div className="grid grid-cols-1 gap-2">
@@ -789,7 +907,7 @@ const ProductCategory = () => {
                       <Eye className="h-4 w-4 mr-2" />
                       View Details
                     </Link>
-                    
+
                     {/* Send Enquiry and Get Quote buttons */}
                     <div className="grid grid-cols-2 gap-2">
                       <button
@@ -825,7 +943,7 @@ const ProductCategory = () => {
               Industry-leading quality and performance you can trust
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8">
             <div className="text-center p-4 lg:p-6">
               <div className="bg-blue-100 rounded-full p-3 lg:p-4 w-12 h-12 lg:w-16 lg:h-16 mx-auto mb-3 lg:mb-4 flex items-center justify-center">
@@ -860,7 +978,7 @@ const ProductCategory = () => {
       </section>
 
       {/* CTA Section with Background Image - UPDATED: Added background image */}
-      <section 
+      <section
         className="relative py-12 lg:py-20 text-white"
         style={{
           backgroundImage: 'url(https://images.pexels.com/photos/4226929/pexels-photo-4226929.jpeg?auto=compress&cs=tinysrgb&w=1200)',

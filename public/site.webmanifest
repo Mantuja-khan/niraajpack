@@ -1,0 +1,33 @@
+
+{
+  "name": "Nirraj Packaging",
+  "short_name": "Nirraj",
+  "description": " Packaging Materials Manufacturer and Trading ",
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/logo.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "/logo.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#dc2626",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "start_url": "/",
+  "scope": "/"
+}

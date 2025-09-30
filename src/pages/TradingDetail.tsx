@@ -4,15 +4,10 @@ import { ArrowLeft, Check, Package, Truck, Shield, MessageSquare } from 'lucide-
 import EnquiryModal from '../components/EnquiryModal';
 import angle_board from "../assets/angle_board.png"
 import double_sided from "../assets/double_tap.png"
-import machine_tap from "../assets/machine_tap.png"
-import masking_tap from "../assets/masking_tap.png"
 import shrink_film from "../assets/shrink_film_pof.png"
-import butter_paper from "../assets/butter_paper.png"
 import self_locking from "../assets/self_looking_ploybag.png"
-import clean_film from "../assets/clean_film.png"
-import plastic_strip from "../assets/plastic_strip.png"
 import pp_strip from "../assets/pp_strip.png"
-import air_pillow from "../assets/air_pillow.png"
+import pet_strip from "../assets/pet_strip.png"
 
 
 
@@ -102,64 +97,6 @@ const TradingDetail = () => {
         'Available in clear and colored options'
       ]
     },
-    'machine-tape': {
-      name: 'Machine Tape',
-      image: machine_tap,
-      description: 'Specialized tape designed for automated packaging machinery, ensuring consistent performance and reliable sealing in high-speed production environments.',
-      features: [
-        'Optimized for machine application',
-        'Consistent unwind properties',
-        'High-speed performance',
-        'Reliable adhesion',
-        'Minimal static buildup',
-        'Excellent clarity'
-      ],
-      specifications: {
-        'Type': 'Single Sided, Double Sided',
-        'Usage/Application': 'Sealing',
-        'Tape Length': '0-10m',
-        'Tape Width': '0-20mm, 20-40mm, 40-60mm, 60-80mm, 80-100mm, >100mm',
-        'Length(m)': '10 meter',
-        'Width(mm)': '1-3 Inches'
-      },
-      details: [
-        'Designed for carton sealing machines and automated packaging lines',
-        'Consistent adhesive coating for reliable performance',
-        'Low noise operation during application',
-        'Excellent holding power on various surfaces',
-        'Suitable for high-volume packaging operations',
-        'Available in clear and printed versions'
-      ]
-    },
-    'masking-tape': {
-      name: 'Masking Tape',
-      image: masking_tap,
-      description: 'Premium masking tape for painting, surface protection, and general purpose applications with clean removal and excellent adhesion properties.',
-      features: [
-        'Clean removal without residue',
-        'Excellent paint line definition',
-        'UV resistant for outdoor use',
-        'Conformable to curves',
-        'Easy tear application',
-        'Multiple adhesion levels'
-      ],
-      specifications: {
-        'Color': 'White',
-        'Type': 'Single Sided',
-        'Size': '20 Mtr and 30 Mtr',
-        'Usage': 'Decoration',
-        'Thickness': '0.15mm',
-        'Material': 'Crepe Tape'
-      },
-      details: [
-        'Perfect for automotive painting and refinishing',
-        'Ideal for home improvement and DIY projects',
-        'Excellent for surface protection during construction',
-        'Suitable for labeling and identification',
-        'Available in various adhesion strengths',
-        'Environmentally friendly paper backing'
-      ]
-    },
     'shrink-film': {
       name: 'Shrink Film',
       image: shrink_film,
@@ -186,34 +123,6 @@ const TradingDetail = () => {
         'Reduces packaging costs compared to rigid containers',
         'Suitable for food, beverage, and consumer goods',
         'Available in various colors and printed options'
-      ]
-    },
-    'butter-paper': {
-      name: 'Butter Paper',
-      image: butter_paper,
-      description: 'Food-grade grease-resistant paper ideal for food packaging, wrapping, and cooking applications. Made from pure wood pulp with natural grease resistance.',
-      features: [
-        'Natural grease resistance',
-        'Food-safe coating',
-        'Biodegradable material',
-        'Heat resistant',
-        'Moisture barrier',
-        'Freezer safe'
-      ],
-      specifications: {
-        'Material': 'Wood Pulp with coating',
-        'GSM': '25-40 GSM',
-        'Size': '300mm x 400mm to 1000mm x 1200mm',
-        'Temperature Range': '-18°C to +220°C',
-        'Coating': 'Food-grade silicone'
-      },
-      details: [
-        'Ideal for wrapping sandwiches, burgers, and baked goods',
-        'Prevents grease and oil from seeping through',
-        'Safe for direct food contact',
-        'Microwave and oven safe for cooking applications',
-        'Compostable and environmentally friendly',
-        'Available in sheets, rolls, and custom die-cut shapes'
       ]
     },
     'self-locking-polybag': {
@@ -244,37 +153,9 @@ const TradingDetail = () => {
         'Available with custom printing and branding options'
       ]
     },
-    'clean-film': {
-      name: 'Clean Film',
-      image: clean_film,
-      description: 'Premium quality protective films for surface protection and document preservation. Crystal clear transparency with easy application and removal.',
-      features: [
-        'Crystal clear transparency',
-        'Easy application and removal',
-        'Surface protection',
-        'Scratch resistant',
-        'UV protection',
-        'Residue-free removal'
-      ],
-      specifications: {
-        'Material': 'Polyethylene film',
-        'Thickness': '25-50 microns',
-        'Width': '300mm to 1500mm',
-        'Length': '50m to 500m',
-        'Adhesion': 'Low tack removable'
-      },
-      details: [
-        'Protective film for various surfaces including glass, metal, and plastic',
-        'Ideal for protecting surfaces during construction and renovation',
-        'Easy application without bubbles or wrinkles',
-        'Leaves no residue upon removal',
-        'Suitable for temporary and long-term protection',
-        'Available in various thicknesses and adhesion levels'
-      ]
-    },
     'pet-strip': {
       name: 'PET Strip',
-      image: "https://www.manglamsafpack.com/img/products/pet-strip.png",
+      image: pet_strip,
       description: 'High-strength polyester (PET) strapping strips for heavy-duty packaging and securing applications. Excellent tensile strength and durability.',
       features: [
         'High tensile strength',
@@ -298,34 +179,6 @@ const TradingDetail = () => {
         'Suitable for automated strapping machines',
         'Maintains tension over long periods',
         'Available in various colors for identification'
-      ]
-    },
-    'plastic-strip': {
-      name: 'Plastic Strip',
-      image: plastic_strip,
-      description: 'Versatile plastic strapping strips for general packaging and bundling applications. Lightweight yet strong for various securing needs.',
-      features: [
-        'Lightweight construction',
-        'Good flexibility',
-        'Easy to handle',
-        'Corrosion resistant',
-        'Multiple color options',
-        'Economical solution'
-      ],
-      specifications: {
-        'Material': 'Polypropylene (PP)',
-        'Width': '6mm to 19mm',
-        'Thickness': '0.4mm to 0.8mm',
-        'Tensile Strength': '50-200 kg',
-        'Operating Temperature': '-20°C to +80°C'
-      },
-      details: [
-        'Perfect for light to medium-duty applications',
-        'Excellent for bundling newspapers and magazines',
-        'Suitable for carton and box strapping',
-        'Easy to cut and handle manually',
-        'Available in manual and machine grade',
-        'Environmentally friendly and recyclable'
       ]
     },
     'pp-strip': {
@@ -356,34 +209,6 @@ const TradingDetail = () => {
         'Cost-effective alternative to other strapping materials'
       ]
     },
-    'air-pillow': {
-      name: 'Air Pillow',
-      image: air_pillow,
-      description: 'Inflatable air pillows for void fill and cushioning protection during shipping. Lightweight and efficient packaging solution.',
-      features: [
-        'Excellent void fill properties',
-        'Lightweight packaging',
-        'Puncture resistant',
-        'Easy inflation',
-        'Space-saving storage',
-        'Recyclable material'
-      ],
-      specifications: {
-        'Material': 'Polyethylene (PE)',
-        'Size Range': '100mm x 160mm to 400mm x 300mm',
-        'Film Thickness': '20-25 microns',
-        'Air Retention': '6+ months',
-        'Inflation Pressure': '0.5-1.0 PSI'
-      },
-      details: [
-        'Perfect for filling empty spaces in packages',
-        'Provides excellent cushioning for fragile items',
-        'Reduces shipping costs due to lightweight nature',
-        'Easy to use with manual or automatic inflation',
-        'Environmentally friendly alternative to foam',
-        'Available in various sizes and configurations'
-      ]
-    }
   };
 
   const currentProduct = tradingData[product || ''];

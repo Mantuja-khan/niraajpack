@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import LoadingSpinner from './components/LoadingSpinner';
 import FloatingContactButtons from './components/FloatingContactButtons';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -12,14 +11,11 @@ import Contact from './pages/Contact';
 import ProductCategory from './pages/ProductCategory';
 import TradingDetail from './pages/TradingDetail';
 import ManufacturingDetail from './pages/ManufacturingDetail';
-import { usePageLoading } from './hooks/usePageLoading';
 
 function AppContent() {
-  const isLoading = usePageLoading();
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {isLoading && <LoadingSpinner />}
       <Header />
       <main className="pb-16 lg:pb-0">
         <Routes>

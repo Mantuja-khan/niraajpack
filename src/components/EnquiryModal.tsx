@@ -1,15 +1,7 @@
 import React, { useState } from 'react';
 import { X, Send, CheckCircle, AlertCircle } from 'lucide-react';
 
-interface EnquiryModalProps {
-  isOpen: boolean;
-  onClose: () => void;
-  productName: string;
-  productImage: string;
-  productCategory: string;
-}
-
-const EnquiryModal: React.FC<EnquiryModalProps> = ({
+const EnquiryModal = ({
   isOpen,
   onClose,
   productName,
@@ -23,10 +15,10 @@ const EnquiryModal: React.FC<EnquiryModalProps> = ({
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [submitStatus, setSubmitStatus] = useState('idle');
   const [statusMessage, setStatusMessage] = useState('');
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus('idle');
@@ -40,7 +32,7 @@ const EnquiryModal: React.FC<EnquiryModalProps> = ({
         enquiryType: 'Product Enquiry'
       };
 
-      const response = await fetch('http://localhost:3001/api/enquiry', {
+      const response = await fetch('https://nirrajpackaging-1.onrender.com/api/enquiry', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -70,7 +62,7 @@ const EnquiryModal: React.FC<EnquiryModalProps> = ({
     }
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
@@ -139,38 +131,39 @@ const EnquiryModal: React.FC<EnquiryModalProps> = ({
                   placeholder="Enter your full name"
                 />
               </div>
+              
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                  Email Address *
+                <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                  Phone Number *
                 </label>
                 <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  value={formData.phone}
                   onChange={handleChange}
                   required
                   disabled={isSubmitting}
                   className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent disabled:bg-gray-100"
-                  placeholder="Enter your email address"
+                  placeholder="Enter your phone number"
                 />
               </div>
             </div>
 
             <div>
-              <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                Phone Number *
+              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                Email Address *
               </label>
               <input
-                type="tel"
-                id="phone"
-                name="phone"
-                value={formData.phone}
+                type="email"
+                id="email"
+                name="email"
+                value={formData.email}
                 onChange={handleChange}
                 required
                 disabled={isSubmitting}
                 className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent disabled:bg-gray-100"
-                placeholder="Enter your phone number"
+                placeholder="Enter your email address"
               />
             </div>
 
